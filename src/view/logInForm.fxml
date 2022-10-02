@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="logInContext" prefHeight="400.0" prefWidth="727.0" styleClass="middlePane" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LogInFormController">
+   <children>
+      <StackPane prefHeight="400.0" prefWidth="816.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="400.0" prefWidth="963.0">
+               <children>
+                  <Pane prefHeight="400.0" prefWidth="395.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label layoutX="37.0" layoutY="162.0" prefHeight="27.0" prefWidth="105.0" text="User Name" textFill="#322213">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="237.0" prefHeight="27.0" prefWidth="105.0" text="Password" textFill="#322213">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtUserName" layoutX="147.0" layoutY="156.0" onAction="#moveToPassword" prefHeight="39.0" prefWidth="211.0" promptText="Username" styleClass="lblUserName" stylesheets="@styles/style.css" unFocusColor="#5d5d5d">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <focusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#130f40" />
+                                    <Stop color="#22a6b3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </focusColor>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="txtPassword" layoutX="147.0" layoutY="231.0" onAction="#moveToSignIn" prefHeight="39.0" prefWidth="211.0" promptText="Password" styleClass="lblPassword" stylesheets="@styles/style.css" unFocusColor="#5d5d5d">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <focusColor>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#22a6b3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </focusColor>
+                        </JFXPasswordField>
+                        <JFXButton fx:id="btnLogIn" buttonType="RAISED" layoutX="124.0" layoutY="301.0" onAction="#LogInOnAction" prefHeight="31.0" prefWidth="200.0" styleClass="btnLogIn" stylesheets="@styles/style.css" text="Log In" />
+                        <FontAwesomeIconView glyphName="USER" layoutX="326.0" layoutY="187.0" size="24">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#130f40" />
+                                    <Stop color="#22a6b3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill></FontAwesomeIconView>
+                        <FontAwesomeIconView glyphName="EYE_SLASH" layoutX="324.0" layoutY="259.0" size="24">
+                           <fill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="#130f40" />
+                                    <Stop color="#22a6b3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill></FontAwesomeIconView>
+                        <Label fx:id="lblWrongLogIn" layoutX="33.0" layoutY="118.0" prefHeight="27.0" prefWidth="330.0" textFill="#cb1b16" />
+                        <Label layoutX="142.0" layoutY="48.0" prefHeight="70.0" prefWidth="139.0" text="Log In">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#22a6b3" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="422.0" prefHeight="400.0" prefWidth="395.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <StackPane layoutX="-6.0" layoutY="-1.0" prefHeight="400.0" prefWidth="403.0">
+                           <children>
+                              <ImageView fitHeight="454.0" fitWidth="396.0" opacity="0.84" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/LogIn.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

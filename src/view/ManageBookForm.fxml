@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookContext" prefHeight="829.0" prefWidth="1134.0" styleClass="middlePane" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageBookFormController">
+   <children>
+      <Separator layoutX="7.0" layoutY="57.0" prefHeight="0.0" prefWidth="1122.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="5.0" />
+      <Label layoutX="14.0" prefHeight="53.0" prefWidth="352.0" text="Manage Book Form" textFill="#463f3a" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="768.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="1.0" layoutY="62.0" prefHeight="768.0" prefWidth="1134.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="62.0">
+        <tabs>
+          <Tab fx:id="tabBook" text="Add Book">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="328.0" prefWidth="1134.0" styleClass="tab" stylesheets="@styles/style.css">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="133.0" text="Add Book" textFill="#d39425" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="6.0" layoutY="128.0" prefHeight="0.0" prefWidth="1122.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="128.0" />
+                        <JFXTextField fx:id="txtSearchBook" focusColor="#2d3142" labelFloat="true" layoutX="854.0" layoutY="195.0" onKeyReleased="#searchBookOnKeyReleased" prefHeight="37.0" prefWidth="265.0" promptText="Search Book" styleClass="tctSearch" stylesheets="@styles/style.css" unFocusColor="#2d3142" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="15.0" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" layoutX="1094.0" layoutY="218.0" size="15" AnchorPane.rightAnchor="26.071428298950195" />
+                        <JFXButton fx:id="btnBookAdd" buttonType="RAISED" layoutX="950.0" layoutY="143.0" onMouseClicked="#bookAddOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="GiveToBook" stylesheets="@styles/style.css" text="Add" textFill="WHITE" AnchorPane.rightAnchor="10.0" />
+                        <TableView fx:id="tblBook" layoutY="256.0" prefHeight="460.0" prefWidth="1108.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="256.0">
+                           <columns>
+                              <TableColumn fx:id="colBookId" prefWidth="75.0" text="Book Id" />
+                              <TableColumn fx:id="colBookName" prefWidth="131.0" text="Name" />
+                              <TableColumn fx:id="colBookAuthorId" prefWidth="67.0" text="Author Id" />
+                              <TableColumn fx:id="colBookPublisherId" prefWidth="90.0" text="Publisher Id" />
+                              <TableColumn fx:id="colBookUnitPrice" prefWidth="90.0" text="Unit Price" />
+                              <TableColumn fx:id="colCopies" prefWidth="67.0" text="Copies" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TableView>
+                        <JFXButton fx:id="btnBookDelete" buttonType="RAISED" layoutX="587.0" layoutY="143.0" onMouseClicked="#bookDeleteOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnDelete" stylesheets="@styles/style.css" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="373.0" />
+                        <JFXTextField fx:id="txtBookName" labelFloat="true" layoutX="14.0" layoutY="79.0" onKeyReleased="#bookTextFields_Key_Released" promptText="Name" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="950.0" AnchorPane.topAnchor="79.0" />
+                        <JFXTextField fx:id="txtCopies" labelFloat="true" layoutX="704.0" layoutY="79.0" onKeyReleased="#bookTextFields_Key_Released" prefHeight="31.0" prefWidth="169.0" promptText="Copies" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="79.0" />
+                        <JFXButton fx:id="btnBookUpdate" buttonType="RAISED" layoutX="767.0" layoutY="143.0" onMouseClicked="#bookUpdateOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnUpdateIssueDate" stylesheets="@styles/style.css" text="Update" textFill="WHITE" AnchorPane.rightAnchor="193.0" />
+                        <JFXComboBox fx:id="cmbAuthor" labelFloat="true" layoutX="240.0" layoutY="79.0" prefHeight="31.0" prefWidth="187.0" promptText="Select Author" AnchorPane.rightAnchor="706.0" AnchorPane.topAnchor="79.0" />
+                        <JFXComboBox fx:id="cmbPublisher" labelFloat="true" layoutX="470.0" layoutY="79.0" prefHeight="31.0" prefWidth="187.0" promptText="Select Publisher" AnchorPane.rightAnchor="476.0" AnchorPane.topAnchor="79.0" />
+                        <Label layoutX="183.0" layoutY="21.0" prefHeight="21.0" prefWidth="212.0" text="Alredy have" textFill="#cb1b16" visible="false" AnchorPane.leftAnchor="183.0" AnchorPane.topAnchor="21.0" />
+                        <JFXButton fx:id="btnCancel" buttonType="RAISED" layoutX="405.0" layoutY="143.0" onMouseClicked="#cancelOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnCancel" stylesheets="@styles/style.css" text="Cancel" textFill="WHITE" />
+                        <Label fx:id="lblBookId" layoutX="1047.0" layoutY="14.0" text="B-001">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="940.0" layoutY="14.0" text="Book Id :">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabAuthor" text="Add Author">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="1122.0" />
+                        <Separator layoutX="6.0" layoutY="128.0" prefHeight="0.0" prefWidth="1122.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="5.0" />
+                        <JFXTextField fx:id="txtTblAuthorSearch" focusColor="#2d3142" labelFloat="true" layoutX="855.0" layoutY="198.0" onKeyReleased="#searchAuthorOnKeyReleased" prefHeight="37.0" prefWidth="265.0" promptText="Search Author" styleClass="tctSearch" stylesheets="@styles/style.css" unFocusColor="#2d3142" AnchorPane.leftAnchor="855.0" AnchorPane.rightAnchor="13.0" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" size="15" />
+                        <TableView fx:id="tblAuthor" layoutX="13.0" layoutY="258.0" prefHeight="457.0" prefWidth="1109.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="258.0">
+                           <columns>
+                              <TableColumn fx:id="AuthorColId" prefWidth="75.0" text="Author Id" />
+                              <TableColumn fx:id="AuthorColName" prefWidth="131.0" text="Name" />
+                              <TableColumn fx:id="AuthorColTpNo" prefWidth="67.0" text="Tp_No" />
+                              <TableColumn fx:id="AuthorColEmail" prefWidth="90.0" text="Email" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TableView>
+                        <JFXButton fx:id="btnAuthorAdd" buttonType="RAISED" layoutX="948.0" layoutY="142.0" onMouseClicked="#addAuthorOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="GiveToBook" stylesheets="@styles/style.css" text="Add" textFill="WHITE" AnchorPane.rightAnchor="11.0" />
+                        <JFXButton fx:id="btnAuthorDelete" buttonType="RAISED" layoutX="582.0" layoutY="142.0" onMouseClicked="#deleteAuthorOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnDelete" stylesheets="@styles/style.css" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="377.0" />
+                        <JFXButton fx:id="btnAuthorUpdate" buttonType="RAISED" layoutX="764.0" layoutY="142.0" onMouseClicked="#updateAuthorOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnUpdateIssueDate" stylesheets="@styles/style.css" text="Update" textFill="WHITE" AnchorPane.rightAnchor="195.0" />
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="133.0" text="Add Author" textFill="#d39425" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtAuthorName" labelFloat="true" layoutX="14.0" layoutY="83.0" onKeyReleased="#AuthorTextFields_Key_Released" prefHeight="31.0" prefWidth="285.0" promptText="Name" AnchorPane.leftAnchor="14.0" />
+                        <JFXTextField fx:id="txtAuthorTpNo" labelFloat="true" layoutX="333.0" layoutY="83.0" onKeyReleased="#AuthorTextFields_Key_Released" prefHeight="31.0" prefWidth="176.0" promptText="Tp_No" AnchorPane.leftAnchor="333.0" />
+                        <JFXTextField fx:id="txtAuthorEmail" labelFloat="true" layoutX="626.0" layoutY="83.0" onKeyReleased="#AuthorTextFields_Key_Released" prefHeight="31.0" prefWidth="253.0" promptText="Email" AnchorPane.leftAnchor="626.0" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" size="15" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" layoutX="1104.0" layoutY="228.0" size="15" />
+                        <Label fx:id="lblAuthorId" layoutX="1052.0" layoutY="14.0" text="A-001">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="913.0" layoutY="14.0" text="Author Id :">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabPublisher" text="Add Publisher">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="1122.0" />
+                        <Separator layoutX="7.0" layoutY="198.0" prefHeight="0.0" prefWidth="1122.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="4.0" />
+                        <JFXTextField fx:id="txtTblPublisherSearch" focusColor="#2d3142" labelFloat="true" layoutX="854.0" layoutY="262.0" onKeyReleased="#SearchPublisherOnKeyReleased" prefHeight="37.0" prefWidth="265.0" promptText="Search Publisher" styleClass="tctSearch" stylesheets="@styles/style.css" unFocusColor="#2d3142" AnchorPane.leftAnchor="854.0" AnchorPane.rightAnchor="14.0" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" size="15" />
+                        <TableView fx:id="tblPublisher" layoutX="13.0" layoutY="314.0" prefHeight="400.0" prefWidth="1109.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="314.0">
+                           <columns>
+                              <TableColumn fx:id="publisherColId" prefWidth="75.0" text="Publisher Id" />
+                              <TableColumn fx:id="publisherColName" prefWidth="131.0" text="Name" />
+                              <TableColumn fx:id="publisherColTpNo" prefWidth="67.0" text="Tp_No" />
+                              <TableColumn fx:id="publisherColEmail" prefWidth="90.0" text="Email" />
+                              <TableColumn fx:id="publisherColAddress" prefWidth="90.0" text="Address" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </TableView>
+                        <JFXButton fx:id="btnPublisherAdd" buttonType="RAISED" layoutX="940.0" layoutY="216.0" onMouseClicked="#addPublisherOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="GiveToBook" stylesheets="@styles/style.css" text="Add" textFill="WHITE" AnchorPane.rightAnchor="19.0" />
+                        <JFXButton fx:id="btnPublisherDelete" buttonType="RAISED" layoutX="561.0" layoutY="216.0" onMouseClicked="#deletePublisherOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnDelete" stylesheets="@styles/style.css" text="Delete" textFill="WHITE" AnchorPane.rightAnchor="398.0" />
+                        <JFXButton fx:id="btnPublisherUpdate" buttonType="RAISED" layoutX="748.0" layoutY="216.0" onMouseClicked="#updatePublisherOnClicked" prefHeight="31.0" prefWidth="174.0" styleClass="btnUpdateIssueDate" stylesheets="@styles/style.css" text="Update" textFill="WHITE" AnchorPane.rightAnchor="211.0" />
+                        <Label layoutX="14.0" layoutY="14.0" prefHeight="35.0" prefWidth="199.0" text="Add Publisher" textFill="#d39425" AnchorPane.leftAnchor="14.0">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="txtPublisherName" labelFloat="true" layoutX="13.0" layoutY="84.0" onKeyReleased="#PublisherTextFields_Key_Released" prefHeight="31.0" prefWidth="285.0" promptText="Name" AnchorPane.leftAnchor="13.0" />
+                        <JFXTextField fx:id="txtPublisherTpNo" labelFloat="true" layoutX="309.0" layoutY="84.0" onKeyReleased="#PublisherTextFields_Key_Released" prefHeight="31.0" prefWidth="169.0" promptText="Tp_No" AnchorPane.leftAnchor="309.0" />
+                        <JFXTextField fx:id="txtPublisherEmail" labelFloat="true" layoutX="501.0" layoutY="84.0" onKeyReleased="#PublisherTextFields_Key_Released" prefHeight="31.0" prefWidth="314.0" promptText="Email" AnchorPane.leftAnchor="501.0" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" size="15" />
+                        <FontAwesomeIconView fill="#2d3142" glyphName="SEARCH" layoutX="1099.0" layoutY="285.0" size="15" />
+                        <JFXTextField fx:id="txtPublisherAddress" labelFloat="true" layoutX="14.0" layoutY="142.0" onKeyReleased="#PublisherTextFields_Key_Released" prefHeight="31.0" prefWidth="314.0" promptText="Address" />
+                        <Label fx:id="lblPublisherId" layoutX="1040.0" layoutY="14.0" text="P-001">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="879.0" layoutY="14.0" text="Publisher Id :">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

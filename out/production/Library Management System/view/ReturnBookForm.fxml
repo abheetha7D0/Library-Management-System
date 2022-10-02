@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="returnBookContext" prefHeight="829.0" prefWidth="1134.0" styleClass="middlePane" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReturnBookFormController">
+   <children>
+      <Separator layoutX="7.0" layoutY="57.0" prefHeight="0.0" prefWidth="1122.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="5.0" />
+      <Label layoutX="14.0" prefHeight="53.0" prefWidth="423.0" text="Return Book Form" textFill="#463f3a" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="697.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBookName" layoutX="226.0" layoutY="215.0" prefHeight="35.0" prefWidth="212.0" text="Book Name" AnchorPane.leftAnchor="226.0" AnchorPane.topAnchor="215.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="167.0" prefHeight="35.0" prefWidth="133.0" text="Select Book" textFill="#d39425" AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="167.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblIssueBook" layoutX="518.0" layoutY="112.0" prefHeight="269.0" prefWidth="586.0" AnchorPane.leftAnchor="518.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="112.0">
+         <columns>
+            <TableColumn fx:id="colReaderId" prefWidth="75.0" text="Reader Id" />
+            <TableColumn fx:id="colBooksId" prefWidth="146.0" text="Book Id" />
+            <TableColumn fx:id="colBooksName" prefWidth="146.0" text="Book Name" />
+            <TableColumn fx:id="colDueDate" prefWidth="75.0" text="Due Date" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Separator layoutX="5.0" layoutY="168.0" prefHeight="4.0" prefWidth="495.0" AnchorPane.leftAnchor="5.0" />
+      <Label layoutX="22.0" layoutY="62.0" prefHeight="38.0" prefWidth="162.0" text="Select Reader" textFill="#d39425" AnchorPane.leftAnchor="22.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblReaderName" layoutX="223.0" layoutY="120.0" prefHeight="35.0" prefWidth="187.0" text="Reader Name" AnchorPane.leftAnchor="223.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbReaderId" focusColor="BLACK" labelFloat="true" layoutX="22.0" layoutY="118.0" prefHeight="39.0" prefWidth="174.0" promptText="Reader Id" styleClass="ReaderId" stylesheets="@styles/style.css" unFocusColor="BLACK" AnchorPane.leftAnchor="22.0" />
+      <Separator layoutX="15.0" layoutY="366.0" prefHeight="4.0" prefWidth="475.0" AnchorPane.leftAnchor="15.0" />
+      <Separator layoutX="500.0" layoutY="71.0" orientation="VERTICAL" prefHeight="471.0" prefWidth="18.0" AnchorPane.leftAnchor="500.0" />
+      <JFXButton fx:id="btnAddToList" buttonType="RAISED" disable="true" layoutX="892.0" layoutY="464.0" onMouseClicked="#addToListOnClicked" prefHeight="62.0" prefWidth="212.0" styleClass="GiveToBook" stylesheets="@styles/style.css" text="Add To List" textFill="WHITE" AnchorPane.rightAnchor="30.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblBookReturn" layoutX="15.0" layoutY="564.0" prefHeight="165.0" prefWidth="1107.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="564.0">
+         <columns>
+            <TableColumn fx:id="colBookId" prefWidth="75.0" text="BookId" />
+            <TableColumn fx:id="colBookName" prefWidth="131.0" text="Book Name" />
+            <TableColumn fx:id="colAuthorId" prefWidth="186.0" text="Author Id" />
+            <TableColumn fx:id="colPublisherId" prefWidth="186.0" text="Publisher Id" />
+            <TableColumn fx:id="colReport" prefWidth="186.0" text="Report" />
+            <TableColumn fx:id="colFinePrice" prefWidth="186.0" text="Fine Price" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label fx:id="lblAuthorId" layoutX="19.0" layoutY="269.0" text="Author Id" AnchorPane.leftAnchor="19.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPublisherId" layoutX="226.0" layoutY="269.0" text="Publisher Id" AnchorPane.leftAnchor="226.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnBookReturn" buttonType="RAISED" disable="true" layoutX="901.0" layoutY="743.0" onMouseClicked="#returnBookOnClicked" prefHeight="62.0" prefWidth="212.0" styleClass="GiveToBook" stylesheets="@styles/style.css" text="Return Book" textFill="WHITE" AnchorPane.bottomAnchor="24.0" AnchorPane.rightAnchor="21.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblBookReturn" layoutX="988.0" layoutY="14.0" prefHeight="35.0" prefWidth="133.0" text="BI-001" textFill="#d39425" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="842.0" layoutY="14.0" prefHeight="35.0" prefWidth="125.0" text="Return Id :" AnchorPane.rightAnchor="159.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" disable="true" layoutX="630.0" layoutY="464.0" onMouseClicked="#clearOnClicked" prefHeight="62.0" prefWidth="212.0" styleClass="btnCancel" stylesheets="@styles/style.css" text="Clear" textFill="WHITE" AnchorPane.rightAnchor="292.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblBooks" layoutX="1071.0" layoutY="415.0" prefHeight="35.0" prefWidth="21.0" text="1" AnchorPane.leftAnchor="1071.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="988.0" layoutY="415.0" text="Books : " AnchorPane.leftAnchor="988.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="380.0" prefHeight="35.0" prefWidth="133.0" text="Report" textFill="#d39425">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="txtFldReport" layoutX="18.0" layoutY="428.0" prefHeight="128.0" prefWidth="475.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </JFXTextArea>
+      <Label layoutX="518.0" layoutY="62.0" prefHeight="38.0" prefWidth="162.0" text="Issue Books" textFill="#d39425">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbBookId" focusColor="BLACK" labelFloat="true" layoutX="16.0" layoutY="213.0" prefHeight="39.0" prefWidth="174.0" promptText="Book Id" styleClass="ReaderId" stylesheets="@styles/style.css" unFocusColor="BLACK" />
+      <JFXTextField fx:id="txtFinePrice" labelFloat="true" layoutX="518.0" layoutY="420.0" promptText="Fine Price" />
+      <JFXButton buttonType="RAISED" layoutX="518.0" layoutY="16.0" onMouseClicked="#OpenTransactionDetailOnClicked" styleClass="btnUpdate" text="Transaction Detail" />
+   </children>
+</AnchorPane>

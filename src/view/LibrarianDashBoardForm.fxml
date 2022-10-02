@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="852.0" prefWidth="1286.0" styleClass="middlePane" stylesheets="@styles/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LibrarianDashBoardFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <VBox prefHeight="771.0" prefWidth="152.0" spacing="30.0" styleClass="sidePane" stylesheets="@styles/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="65.0" onMouseClicked="#openBookReportOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Book Report" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="AREA_CHART" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="157.0" onMouseClicked="#openBookSupplyReportOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Supply Report" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="AREA_CHART" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" onMouseClicked="#openAttendanceOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Attendance" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE_ALT" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="78.0" onMouseClicked="#openManageReaderOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Manage Reader" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onMouseClicked="#openManageBookFormOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Manage Book" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" onMouseClicked="#openSupplyToLibraryFormOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Supply to Library" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onMouseClicked="#openManageUsersOnClicked" prefHeight="57.0" prefWidth="152.0" styleClass="btnSide" stylesheets="@styles/style.css" text="Manage Users" textFill="#775417">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="24" />
+                     </graphic>
+                     <font>
+                        <Font name="Arial Narrow Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <ImageView fitHeight="78.0" fitWidth="148.0" pickOnBounds="true" preserveRatio="true" translateX="6.0">
+                     <image>
+                        <Image url="@../assets/Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets top="55.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <StackPane fx:id="paneRoot" prefHeight="200.0" prefWidth="200.0" styleClass="middlePane" stylesheets="@styles/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="829.0" prefWidth="1134.0" styleClass="middlePane" stylesheets="@styles/style.css" />
+               </children>
+            </StackPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="68.0" prefWidth="1181.0" styleClass="headerPane" stylesheets="@styles/style.css" BorderPane.alignment="CENTER">
+               <effect>
+                  <DropShadow height="39.66" radius="20.884999999999998" width="45.88" />
+               </effect>
+               <children>
+                  <Label layoutX="8.0" layoutY="3.0" prefHeight="51.0" prefWidth="166.0" text="Library" textFill="WHITE">
+                     <font>
+                        <Font name="Lucida Fax Regular" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRole" layoutX="184.0" layoutY="17.0" text="&lt;User role&gt;" textFill="#dff9fb" AnchorPane.leftAnchor="184.0" AnchorPane.topAnchor="17.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="1037.0" layoutY="17.0" text="&lt;12.12 PM&gt;" textFill="#dff9fb" AnchorPane.rightAnchor="117.0" AnchorPane.topAnchor="17.0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="905.0" layoutY="21.0" text="&lt;2021-09-04&gt;" textFill="#dff9fb" AnchorPane.rightAnchor="264.0" AnchorPane.topAnchor="21.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="lblUserName" layoutX="776.0" layoutY="21.0" text="&lt;UserName&gt;" textFill="#dff9fb" AnchorPane.rightAnchor="402.0" AnchorPane.topAnchor="21.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
+                  </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="POWER_OFF" layoutX="1223.0" layoutY="42.0" onMouseClicked="#logOutOnClicked" size="28" styleClass="btnExitIcon" AnchorPane.rightAnchor="39.0" AnchorPane.topAnchor="18.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="COG" layoutX="1186.0" layoutY="42.0" onMouseClicked="#openSettingFormOnClicked" size="24" styleClass="settingIcon" AnchorPane.rightAnchor="79.4285717010498" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

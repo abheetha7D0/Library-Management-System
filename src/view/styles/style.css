@@ -1,0 +1,259 @@
+/*Log In Styles Start*/
+.btnLogIn {
+    -fx-background-radius: 15;
+    -fx-background-color: linear-gradient(to bottom left,#5e5e5e, #130f40);
+    -fx-text-fill: #c6c2c2;
+}
+.logInContext {
+    -fx-background-color: linear-gradient(to bottom left, #0a0908, #5e503f);
+}
+/*Log In Styles End*/
+
+.root{
+    -fx-background-color: #535c68;
+}
+
+.headerPane {
+    -fx-background-color: #130f40;
+
+}
+
+.btnIn{
+    -fx-background-color: #2ecc71;
+}
+.btnOut{
+    -fx-background-color: #e74c3c;
+}
+.headerImage {
+    -fx-background-radius: 0 0 30 0;
+}
+
+
+.btnExitIcon:hover{
+    -fx-fill: #d63031;
+
+}
+.settingIcon:hover {
+    -fx-fill: #22a6b3;
+}
+
+.sidePane {
+    -fx-background-color: #22a6b3;
+}
+.btnSide {
+
+    -fx-text-fill: #ffffff;
+}
+.btnSide:hover {
+-fx-background-color: #000000;
+    -fx-text-fill: #c7ecee;
+}
+.btnSide:focused{
+-fx-background-color: #130f40;
+    -fx-text-fill: #c7ecee;
+}
+
+.tctSearch {
+    -fx-prompt-text-fill: #2d3142;
+}
+
+.BookAvailableOrNot {
+
+}
+
+.ReaderId {
+    -fx-prompt-text-fill: black;
+    -fx-font-size: 18px;
+}
+
+.GiveToBook {
+    -fx-background-color: #386641;
+}
+
+.btnAddReader {
+    -fx-background-color: #386641;
+    -fx-text-fill: #ffffff;
+}
+
+.btnAddBook {
+    -fx-background-color: #386641;
+    -fx-text-fill: #ffffff;
+}
+
+.btnCancel {
+    -fx-background-color: #ffda79;
+}
+
+.btnUpdateIssueDate {
+    -fx-background-color: #f28f3b;
+}
+/*LogIn Form Styles Start*/
+.lblUserName {
+    -fx-text-fill: #000000;
+}
+
+.lblPassword {
+    -fx-text-fill: #000000;
+}
+
+/*LogIn Form Styles End*/
+.btnReport {
+    -fx-background-color: #cb5516;
+}
+/*Reader Update Styles Start*/
+.txtFieldDate {
+    -fx-text-fill: #000000;
+}
+
+.btnView {
+    -fx-background-color: #4ccb16;
+}
+
+.txtAutoFillField {
+    -fx-text-fill: #000000;
+    -fx-prompt-text-fill: #000000;
+
+}
+
+/*Reader Update Styles Start*/
+.btnUpdate{
+    -fx-background-color: #cb5516;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.textPane{
+    -fx-background-color: white;
+    -fx-border-color: rgba(76, 73, 73, 0.83);
+    -fx-border-radius: 8px;
+}
+.textField{
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #726d6d;
+}
+.textLabel{
+    -fx-background-color: white;
+    -fx-padding: 0 5px 0px 5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(76, 73, 73, 0.83);;
+}
+/*Reader Update Styles End*/
+.checkPrompt {
+    -fx-prompt-text-fill: #84817a;
+    -fx-text-fill: #000000;
+
+
+}
+.checkPrompt:focused {
+-fx-text-fill: #000000;
+
+}
+
+.btnDelete {
+    -fx-background-color: #D63031FF;
+}
+
+/*TabPane Styles Start*/
+.tab-pane{
+    -fx-background-color: transparent;
+}
+.tab-pane:focused{
+    -fx-background-color: transparent;
+
+}
+.tab-pane :top{
+    -fx-background-color:#FFFFFF;
+    -fx-border-color: #22a6b3;
+    -fx-border-width: 0px 0px 1px 0px ;
+    -fx-border-style: solid;
+}
+
+
+/*TabPane Styles End*/
+
+
+/*Table Styles Start*/
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color:#FFFFFF;
+    -fx-border-color: #130f40;
+    -fx-border-width: 0px 0px 1px 0px ;
+    -fx-border-style: solid;
+}
+.table-view:row-selection .column-header-background .filler{
+    -fx-background-color:#FFFFFF;
+}
+.table-view:row-selection .column-header-background .show-hide-columns-button{
+    -fx-background-color:#e0e0e0;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #130f40;
+    -fx-font-weight:bold;
+    -fx-font-size:20px;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-pref-height:50px;
+}
+.table-view  .table-column{
+    -fx-padding: 18 0 0 10;
+    -fx-border-width: 0px 0px 0px 0px ;
+}
+
+.table-view > .virtual-flow > .scroll-bar:vertical,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track,
+.table-view > .virtual-flow > .scroll-bar:vertical > .track-background,
+.table-view > .virtual-flow > .scroll-bar:horizontal,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track,
+.table-view > .virtual-flow > .scroll-bar:horizontal > .track-background {
+    -fx-background-color: transparent;
+}
+
+.table-view > .virtual-flow > .scroll-bar > .increment-button,
+.table-view > .virtual-flow > .scroll-bar > .decrement-button {
+    -fx-opacity: 0;
+}
+
+.table-view .table-row-cell{
+    -fx-background-color:#FFF;
+    -fx-font-size:18px;
+    -fx-pref-height:50px;
+    -fx-border-width: 0px 0px 1px 0px ;
+    -fx-border-color: #878787;
+}
+
+.table-view .table-row-cell:hover {
+    -fx-background-color:#e0e0e0;
+}
+
+.table-view .table-row-cell:selected{
+    -fx-background-color: #22a6b3;
+}
+.table-view:row-selection .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:#e0e0e0;
+    -fx-border-color:#262626;
+}
+.table-view .table-row-cell:empty{
+    -fx-background-color:#FFFFFF;
+    -fx-border-color:#FFFFFF;
+}
+/*table Styles End*/
+.ReportPane{
+    -fx-background-color: #7ed6df;
+    -fx-background-radius: 25;
+}
+
+.middlePane {
+    -fx-background-color: #dff9fb;
+    -fx-background-radius: 25;
+}
